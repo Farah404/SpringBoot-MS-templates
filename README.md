@@ -17,9 +17,13 @@ Requests through POSTMAN / swagger-ui.
 
 ### Installing
 
-* Clone repository
-* Modify related application.properties values to fit your credentials
-* Create local appropriate db when using mySQL databases.
+* H2 & MongoDB related folders
+   * Clone repository
+   * Modify related application.properties values to fit your credentials
+* Zuul & Eureka related architecture
+   * Fork the repository
+   * Modify each microservices-{folderName}.properties values in main git folder to fit your SQL credentials
+   * Create local appropriate SQL databases (such as insured_db, contract_db and so on)
 
 ### Executing program
 
