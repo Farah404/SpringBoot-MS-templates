@@ -2,6 +2,8 @@ package fr.isika.al17.urbanisationsi.microservices_insured.controller;
 
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import javax.validation.Valid;
 
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import fr.isika.al17.urbanisationsi.microservices_insured.configuration.ApplicationPropertiesConfiguration;
 import fr.isika.al17.urbanisationsi.microservices_insured.dao.InsuredRepository;
 import fr.isika.al17.urbanisationsi.microservices_insured.model.Insured;
 import io.swagger.annotations.Api;
@@ -30,6 +33,9 @@ public class InsuredController {
     
     @Autowired
     InsuredRepository insuredRepository;
+    
+    @Autowired    
+    ApplicationPropertiesConfiguration appProperties; 
     
     @PostMapping(path="/addInsured")
     public ResponseEntity<Void> createInsured(@Valid @RequestBody Insured insured){
@@ -51,6 +57,14 @@ public class InsuredController {
     @GetMapping(path="/insuredList")
     public @ResponseBody Iterable<Insured> getAllAssures() {
         return insuredRepository.findAll();
+    }
+    
+    @GetMapping(path="/limitedInsuredList")
+    public List<Insured> getAllInsured(){
+	Iterable<Insured> insuredIterable = insuredRepository.findAll();
+	List insuredList = StreamSupport.stream(insuredIterable.spliterator(),false).collect(Collectors.toList());
+	List<Insured> limitedList = insuredList.subList(0, appProperties.getlimitedInsuredNumber());
+	return limitedList;
     }
     
     @ApiOperation(value = "Find an insured based on its person number if the later exists")
