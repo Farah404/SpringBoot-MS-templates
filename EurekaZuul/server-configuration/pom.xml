@@ -8,11 +8,11 @@
 		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.urbanisation_si</groupId>
-	<artifactId>config_server</artifactId>
+	<groupId>fr.isika.al17.urbanisationsi</groupId>
+	<artifactId>server-configuration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>config_server</name>
-	<description>Demo project for Spring Boot</description>
+	<name>server-configuration</name>
+	<description>Server configuration for vaious MS</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
