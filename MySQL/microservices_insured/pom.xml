@@ -8,11 +8,11 @@
 		<version>2.3.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.urbanisation-si</groupId>
-	<artifactId>microservices_assure</artifactId>
+	<groupId>fr.isika.al17.urbanisation-si</groupId>
+	<artifactId>microservices_insured</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservices_assure</name>
-	<description>Spring Boot et MySQL. Creation de la base previte_assure_db et de la table assure</description>
+	<name>microservices_insured</name>
+	<description>Spring Boot &amp; MySQL database Creation</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
