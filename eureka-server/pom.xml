@@ -8,11 +8,11 @@
 		<version>2.3.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.urbanisation-si</groupId>
+	<groupId>fr.isika.al17.urbanisationsi</groupId>
 	<artifactId>eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eureka-server</name>
-	<description>Eureka Serveur registre pour les microservices de l'étude de cas ClairPrev</description>
+	<description>Eureka Serveur</description>
 
 	<properties>
 		<java.version>1.8</java.version>
