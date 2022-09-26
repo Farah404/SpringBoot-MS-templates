@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>ClairPrev - PrevIT</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>ClairPrev Prévoyance - Liste des Produits</h1>
+		<div class="row">
+						<p th:object="${contratBean}" th:text="${contratBean.numeroAssure}">
+						<br /></p>
+						<table>
+							<thead>
+								<tr>
+									<th th:text="NumeroProduit"></th>
+									<th th:text="Libelle"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="produit : ${produits}" class="col-md-4 my-1">
+									<td><a
+										th:href="@{|/affecterNumeroProduit/${contratBean.numeroAssure}/${produit.numeroProduit}|}"
+										th:text="${produit.numeroProduit}"> </a></td>
+									<td th:text="${produit.libelle}"></td>
+								</tr>
+							</tbody>
+						</table>
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</body>
+</html>

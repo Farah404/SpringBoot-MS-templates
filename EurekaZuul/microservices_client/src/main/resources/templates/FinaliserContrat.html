@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>ClairPrev - PrevIT</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>ClairPrev Prévoyance - Finaliser Contrat</h1>
+		<div class="row">
+			<div class="col-md-4 mx-auto mt-5 text-center">
+<!-- 				<p th:object="${contratAffecte}" th:text="${contratAffecte.numeroAssure}"> -->
+				<p>
+
+				<form th:action="@{|/finaliserContrat/${contratAffecte.numeroAssure}|}" th:object="${contratAffecte}" method="GET">
+					<br />Numéro assuré : <p th:text="*{numeroAssure}"></p>
+					<br />Numéro produit : <p th:text="*{numeroProduit}"></p>
+					Numéro du nouveau contrat : <input type="text" th:field="*{numeroContrat}" />
+					Date Début : <input type="text" th:field="*{dateDebut}" />
+					<br />
+					<input type="submit" value="Valider" />
+				</form>
+				</p>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</body>
+</html>

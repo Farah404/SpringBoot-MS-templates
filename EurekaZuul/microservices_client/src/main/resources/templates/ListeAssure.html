@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>ClairPrev - PrevIT</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>ClairPrev Prévoyance - Liste des Assurés</h1>
+		<div class="row">
+						<table>
+							<thead>
+								<tr>
+									<th th:text="Prenom"></th>
+									<th th:text="Nom"></th>
+									<th th:text="NumeroAssure"></th>
+									<th th:text="DateNaissance"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="assure : ${assures}" class="col-md-4 my-1">
+									<td th:text="${assure.prenom}"></td>
+									<td th:text="${assure.nom}"></td>
+									<td><a
+										th:href="@{|/creerContrat/${assure.numeroAssure}|}"
+										th:text="${assure.numeroAssure}"> </a></td>
+									<td th:text="${#dates.format(assure.dateNaissance, 'dd-MM-yyyy HH:mm')}"></td>
+								</tr>
+							</tbody>
+						</table>
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</body>
+</html>
