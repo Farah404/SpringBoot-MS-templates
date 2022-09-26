@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+    <head>
+        <title>Connexion</title>
+    </head>
+    <body class="text-center">
+        <div layout:fragment="content">
+            <form class="form-signin" th:action="@{/connecter}" method="post">
+                <h1 class="h3 mb-3 font-weight-normal">Merci de vous enregistrer</h1>
+                <div th:if="${param.error}">
+                    Mail et mot de passe invalides.
+                </div>
+                <div th:if="${param.logout}">
+                    Vous avez été déconnecté.
+                </div>
+                <label for="inputEmail" class="sr-only">Mail</label>
+                <input type="email" name="mail" id="inputEmail" class="form-control" placeholder="Mail" required="" />
+                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                <input type="password" name="motdepasse" id="inputPassword" class="form-control" placeholder="motdepasse" required="" />
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+            </form>
+            <form class="form-signin" th:action="@{/enregistrer}" method="get">
+                <button class="btn btn-md btn-success btn-block" type="Submit">Enregistrement</button>
+            </form>
+        </div>
+    </body>
+</html>

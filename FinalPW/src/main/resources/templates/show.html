@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
+    <head>
+        <title>Tableau de bord du Gestionnaire Prévoyance</title>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <h1 th:inline="text">Bonjour [[${#httpServletRequest.remoteUser}]]!</h1>
+            <h2>Voici votre tableau de bord administrateur</h2>
+        </div>
+    </body>
+</html>
