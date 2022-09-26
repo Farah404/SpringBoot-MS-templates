@@ -20,5 +20,5 @@ public interface MicroserviceInsuredProxy {
   public List<InsuredBean> findInsuredByInsuredNumber(@PathVariable Long insuredNumber);
 
   @GetMapping(path="/microservice-insured/insured/insuredByNameFirstname/{name}/{firstname}")
-  List<InsuredBean> findInsuredByLastAndFirstname(@PathVariable String name, @PathVariable String firstname);
+  List<InsuredBean> findInsuredByLastnameAndFirstname(@PathVariable String name, @PathVariable String firstname);
 } 

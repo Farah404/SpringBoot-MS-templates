@@ -10,10 +10,10 @@
         <!-- <version>2.2.6.RELEASE</version> -->
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.urbanisation-si</groupId>
+    <groupId>fr.isika.al17.urbanisationsi</groupId>
     <artifactId>microservices_client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>microservices_clientui</name>
+    <name>microservices_client</name>
     <description>Spring Boot with Spring Web and Thymeleaf</description>
     <properties>
         <java.version>1.8</java.version>
@@ -41,7 +41,6 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- // J4 - 3 -->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>

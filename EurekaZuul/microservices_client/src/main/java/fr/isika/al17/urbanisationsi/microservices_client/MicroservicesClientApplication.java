@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 	
 @SpringBootApplication
-@EnableFeignClients("com.urbanisation_si.microservices_client")
+@EnableFeignClients("fr.isika.al17.urbanisationsi.microservices_client")
 @EnableDiscoveryClient
 public class MicroservicesClientApplication {
     public static void main(String[] args) {

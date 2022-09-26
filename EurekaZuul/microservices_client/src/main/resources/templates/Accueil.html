@@ -53,10 +53,10 @@
 		<!-- //J4 - 10 -->
 		<div class="col-md-4 mx-auto mt-5 text-center">
 			<p>
-			<form th:action="@{/saisir-assure}" th:object="${assureBean}"
+			<form th:action="@{/input-Insured}" th:object="${insuredBean}"
 				method="POST">
-				Nom : <input type="text" th:field="*{nom}" /> <br /> Prenom : <input
-					type="text" th:field="*{prenom}" /> <br /> <input type="submit"
+				Nom : <input type="text" th:field="*{lastname}" /> <br /> firstname : <input
+					type="text" th:field="*{firstname}" /> <br /> <input type="submit"
 					value="Valider" />
 			</form>
 			</p>

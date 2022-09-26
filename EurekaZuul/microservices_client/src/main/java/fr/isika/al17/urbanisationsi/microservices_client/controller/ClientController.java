@@ -50,10 +50,10 @@ public class ClientController {
         return "InsuredDetails";
     }
 
-    @PostMapping(value = "/type-insured")
+    @PostMapping(value = "/input-Insured")
     public String inputInsured(InsuredBean insuredBean, Model model){
         log.info("---------------------------- sending request to inputInsured");
-        List<InsuredBean> insuredList =  mInsuredProxy.findInsuredByLastAndFirstname(insuredBean.getLastname(), insuredBean.getFirstname());
+        List<InsuredBean> insuredList =  mInsuredProxy.findInsuredByLastnameAndFirstname(insuredBean.getLastname(), insuredBean.getFirstname());
         model.addAttribute("insuredList", insuredList);
         return "InsuredList";
     }
